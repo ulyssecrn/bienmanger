@@ -7,7 +7,6 @@
 This project aims to recognise dishes with a neural network to indicate its ingredients and nutritional values. It uses TensorFlow and Keras, and is trained on the [Food 101 dataset](https://www.kaggle.com/datasets/kmader/food41).
 We wanted to create a website on which the user can load an image and get back the name of the dish with a link to several recipes. We also added options to return the score or nutriscore of the dish as well as wine recommendations.
 
-The website is deployed on an Azure VM with 1 vCPU and 1GB of RAM using the free student credits.
 
 ## Installation
 
