@@ -2,8 +2,6 @@
 
 ![site picture](bienmanger.png)
 
-Test it [here](http://4.231.49.147:8080) !
-
 ## Description
 
 This project aims to recognise dishes with a neural network to indicate its ingredients and nutritional values. It uses TensorFlow and Keras, and is trained on the [Food 101 dataset](https://www.kaggle.com/datasets/kmader/food41).
