@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Coverage for prediction.py: 85%</title>
+    <link rel="icon" sizes="32x32" href="favicon_32.png">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="text/javascript" src="coverage_html.js" defer></script>
+</head>
+<body class="pyfile">
+<header>
+    <div class="content">
+        <h1>
+            <span class="text">Coverage for </span><b>prediction.py</b>:
+            <span class="pc_cov">85%</span>
+        </h1>
+        <aside id="help_panel_wrapper">
+            <input id="help_panel_state" type="checkbox">
+            <label for="help_panel_state">
+                <img id="keyboard_icon" src="keybd_closed.png" alt="Show/hide keyboard shortcuts" />
+            </label>
+            <div id="help_panel">
+                <p class="legend">Shortcuts on this page</p>
+                <div class="keyhelp">
+                    <p>
+                        <kbd>r</kbd>
+                        <kbd>m</kbd>
+                        <kbd>x</kbd>
+                        &nbsp; toggle line displays
+                    </p>
+                    <p>
+                        <kbd>j</kbd>
+                        <kbd>k</kbd>
+                        &nbsp; next/prev highlighted chunk
+                    </p>
+                    <p>
+                        <kbd>0</kbd> &nbsp; (zero) top of page
+                    </p>
+                    <p>
+                        <kbd>1</kbd> &nbsp; (one) first highlighted chunk
+                    </p>
+                    <p>
+                        <kbd>[</kbd>
+                        <kbd>]</kbd>
+                        &nbsp; prev/next file
+                    </p>
+                    <p>
+                        <kbd>u</kbd> &nbsp; up to the index
+                    </p>
+                    <p>
+                        <kbd>?</kbd> &nbsp; show/hide this help
+                    </p>
+                </div>
+            </div>
+        </aside>
+        <h2>
+            <span class="text">26 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">22<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">4<span class="text"> missing</span></button>
+            <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
+        </h2>
+        <p class="text">
+            <a id="prevFileLink" class="nav" href="model_training_py.html">&#xab; prev</a> &nbsp; &nbsp;
+            <a id="indexLink" class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
+            <a id="nextFileLink" class="nav" href="test_dataset_separation_py.html">&#xbb; next</a>
+            &nbsp; &nbsp; &nbsp;
+            <a class="nav" href="https://coverage.readthedocs.io">coverage.py v6.5.0</a>,
+            created at 2022-11-18 13:54 +0100
+        </p>
+        <aside class="hidden">
+            <button type="button" class="button_next_chunk" data-shortcut="j"/>
+            <button type="button" class="button_prev_chunk" data-shortcut="k"/>
+            <button type="button" class="button_top_of_page" data-shortcut="0"/>
+            <button type="button" class="button_first_chunk" data-shortcut="1"/>
+            <button type="button" class="button_prev_file" data-shortcut="["/>
+            <button type="button" class="button_next_file" data-shortcut="]"/>
+            <button type="button" class="button_to_index" data-shortcut="u"/>
+            <button type="button" class="button_show_hide_help" data-shortcut="?"/>
+        </aside>
+    </div>
+</header>
+<main id="source">
+    <p class="run"><span class="n"><a id="t1" href="#t1">1</a></span><span class="t"><span class="key">from</span> <span class="nam">tensorflow</span><span class="op">.</span><span class="nam">keras</span><span class="op">.</span><span class="nam">preprocessing</span> <span class="key">import</span> <span class="nam">image</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t2" href="#t2">2</a></span><span class="t"><span class="key">import</span> <span class="nam">matplotlib</span><span class="op">.</span><span class="nam">pyplot</span> <span class="key">as</span> <span class="nam">plt</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t3" href="#t3">3</a></span><span class="t"><span class="key">import</span> <span class="nam">numpy</span> <span class="key">as</span> <span class="nam">np</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t4" href="#t4">4</a></span><span class="t"><span class="key">import</span> <span class="nam">os</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t5" href="#t5">5</a></span><span class="t"><span class="key">from</span> <span class="nam">tensorflow</span><span class="op">.</span><span class="nam">keras</span><span class="op">.</span><span class="nam">models</span> <span class="key">import</span> <span class="nam">load_model</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t6" href="#t6">6</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t7" href="#t7">7</a></span><span class="t"><span class="com">#creating a list of all the foods, in the argument i put the path to the folder that has all folders for food</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t8" href="#t8">8</a></span><span class="t"><span class="key">def</span> <span class="nam">create_foodlist</span><span class="op">(</span><span class="nam">path</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t9" href="#t9">9</a></span><span class="t">    <span class="nam">list_food</span> <span class="op">=</span> <span class="nam">list</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t10" href="#t10">10</a></span><span class="t">    <span class="key">for</span> <span class="nam">root</span><span class="op">,</span> <span class="nam">dirs</span><span class="op">,</span> <span class="nam">files</span> <span class="key">in</span> <span class="nam">os</span><span class="op">.</span><span class="nam">walk</span><span class="op">(</span><span class="nam">path</span><span class="op">,</span> <span class="nam">topdown</span><span class="op">=</span><span class="key">False</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t11" href="#t11">11</a></span><span class="t">      <span class="key">for</span> <span class="nam">food_name</span> <span class="key">in</span> <span class="nam">dirs</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t12" href="#t12">12</a></span><span class="t">        <span class="nam">list_food</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="nam">food_name</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t13" href="#t13">13</a></span><span class="t">    <span class="key">return</span> <span class="nam">list_food</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t14" href="#t14">14</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t15" href="#t15">15</a></span><span class="t"><span class="com">#function to help in predicting classes of new images loaded from my computer(for now) </span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t16" href="#t16">16</a></span><span class="t"><span class="key">def</span> <span class="nam">predict_dish</span><span class="op">(</span><span class="nam">model</span><span class="op">,</span> <span class="nam">img</span><span class="op">,</span> <span class="nam">show</span> <span class="op">=</span> <span class="key">False</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t17" href="#t17">17</a></span><span class="t">    <span class="nam">food_list</span> <span class="op">=</span> <span class="op">[</span><span class="str">'apple_pie'</span><span class="op">,</span><span class="str">'baby_back_ribs'</span><span class="op">,</span><span class="str">'baklava'</span><span class="op">,</span><span class="str">'beef_carpaccio'</span><span class="op">,</span><span class="str">'beef_tartare'</span><span class="op">,</span><span class="str">'beet_salad'</span><span class="op">,</span><span class="str">'beignets'</span><span class="op">,</span><span class="str">'bibimbap'</span><span class="op">,</span><span class="str">'bread_pudding'</span><span class="op">,</span><span class="str">'breakfast_burrito'</span><span class="op">,</span><span class="str">'bruschetta'</span><span class="op">,</span><span class="str">'caesar_salad'</span><span class="op">,</span><span class="str">'cannoli'</span><span class="op">,</span><span class="str">'caprese_salad'</span><span class="op">,</span><span class="str">'carrot_cake'</span><span class="op">,</span><span class="str">'ceviche'</span><span class="op">,</span><span class="str">'cheese_plate'</span><span class="op">,</span><span class="str">'cheesecake'</span><span class="op">,</span><span class="str">'chicken_curry'</span><span class="op">,</span><span class="str">'chicken_quesadilla'</span><span class="op">,</span><span class="str">'chicken_wings'</span><span class="op">,</span><span class="str">'chocolate_cake'</span><span class="op">,</span><span class="str">'chocolate_mousse'</span><span class="op">,</span><span class="str">'churros'</span><span class="op">,</span><span class="str">'clam_chowder'</span><span class="op">,</span><span class="str">'club_sandwich'</span><span class="op">,</span><span class="str">'crab_cakes'</span><span class="op">,</span><span class="str">'creme_brulee'</span><span class="op">,</span><span class="str">'croque_madame'</span><span class="op">,</span><span class="str">'cup_cakes'</span><span class="op">,</span><span class="str">'deviled_eggs'</span><span class="op">,</span><span class="str">'donuts'</span><span class="op">,</span><span class="str">'dumplings'</span><span class="op">,</span><span class="str">'edamame'</span><span class="op">,</span><span class="str">'eggs_benedict'</span><span class="op">,</span><span class="str">'escargots'</span><span class="op">,</span><span class="str">'falafel'</span><span class="op">,</span><span class="str">'filet_mignon'</span><span class="op">,</span><span class="str">'fish_and_chips'</span><span class="op">,</span><span class="str">'foie_gras'</span><span class="op">,</span><span class="str">'french_fries'</span><span class="op">,</span><span class="str">'french_onion_soup'</span><span class="op">,</span><span class="str">'french_toast'</span><span class="op">,</span><span class="str">'fried_calamari'</span><span class="op">,</span><span class="str">'fried_rice'</span><span class="op">,</span><span class="str">'frozen_yogurt'</span><span class="op">,</span><span class="str">'garlic_bread'</span><span class="op">,</span><span class="str">'gnocchi'</span><span class="op">,</span><span class="str">'greek_salad'</span><span class="op">,</span><span class="str">'grilled_cheese_sandwich'</span><span class="op">,</span><span class="str">'grilled_salmon'</span><span class="op">,</span><span class="str">'guacamole'</span><span class="op">,</span><span class="str">'gyoza'</span><span class="op">,</span><span class="str">'hamburger'</span><span class="op">,</span><span class="str">'hot_and_sour_soup'</span><span class="op">,</span><span class="str">'hot_dog'</span><span class="op">,</span><span class="str">'huevos_rancheros'</span><span class="op">,</span><span class="str">'hummus'</span><span class="op">,</span><span class="str">'ice_cream'</span><span class="op">,</span><span class="str">'lasagna'</span><span class="op">,</span><span class="str">'lobster_bisque'</span><span class="op">,</span><span class="str">'lobster_roll_sandwich'</span><span class="op">,</span><span class="str">'macaroni_and_cheese'</span><span class="op">,</span><span class="str">'macarons'</span><span class="op">,</span><span class="str">'miso_soup'</span><span class="op">,</span><span class="str">'mussels'</span><span class="op">,</span><span class="str">'nachos'</span><span class="op">,</span><span class="str">'omelette'</span><span class="op">,</span><span class="str">'onion_rings'</span><span class="op">,</span><span class="str">'oysters'</span><span class="op">,</span><span class="str">'pad_thai'</span><span class="op">,</span><span class="str">'paella'</span><span class="op">,</span><span class="str">'pancakes'</span><span class="op">,</span><span class="str">'panna_cotta'</span><span class="op">,</span><span class="str">'peking_duck'</span><span class="op">,</span><span class="str">'pho'</span><span class="op">,</span><span class="str">'pizza'</span><span class="op">,</span><span class="str">'pork_chop'</span><span class="op">,</span><span class="str">'poutine'</span><span class="op">,</span><span class="str">'prime_rib'</span><span class="op">,</span><span class="str">'pulled_pork_sandwich'</span><span class="op">,</span><span class="str">'ramen'</span><span class="op">,</span><span class="str">'ravioli'</span><span class="op">,</span><span class="str">'red_velvet_cake'</span><span class="op">,</span><span class="str">'risotto'</span><span class="op">,</span><span class="str">'samosa'</span><span class="op">,</span><span class="str">'sashimi'</span><span class="op">,</span><span class="str">'scallops'</span><span class="op">,</span><span class="str">'seaweed_salad'</span><span class="op">,</span><span class="str">'shrimp_and_grits'</span><span class="op">,</span><span class="str">'spaghetti_bolognese'</span><span class="op">,</span><span class="str">'spaghetti_carbonara'</span><span class="op">,</span><span class="str">'spring_rolls'</span><span class="op">,</span><span class="str">'steak'</span><span class="op">,</span><span class="str">'strawberry_shortcake'</span><span class="op">,</span><span class="str">'sushi'</span><span class="op">,</span><span class="str">'tacos'</span><span class="op">,</span><span class="str">'takoyaki'</span><span class="op">,</span><span class="str">'tiramisu'</span><span class="op">,</span><span class="str">'tuna_tartare'</span><span class="op">,</span><span class="str">'waffles'</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t18" href="#t18">18</a></span><span class="t">    <span class="nam">img</span> <span class="op">=</span> <span class="nam">image</span><span class="op">.</span><span class="nam">load_img</span><span class="op">(</span><span class="nam">img</span><span class="op">,</span> <span class="nam">target_size</span><span class="op">=</span><span class="op">(</span><span class="num">299</span><span class="op">,</span> <span class="num">299</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t19" href="#t19">19</a></span><span class="t">    <span class="nam">img</span> <span class="op">=</span> <span class="nam">image</span><span class="op">.</span><span class="nam">img_to_array</span><span class="op">(</span><span class="nam">img</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t20" href="#t20">20</a></span><span class="t">    <span class="nam">img</span> <span class="op">=</span> <span class="nam">np</span><span class="op">.</span><span class="nam">expand_dims</span><span class="op">(</span><span class="nam">img</span><span class="op">,</span> <span class="nam">axis</span><span class="op">=</span><span class="num">0</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t21" href="#t21">21</a></span><span class="t">    <span class="nam">img</span> <span class="op">/=</span> <span class="num">255.</span> <span class="com"># normalize into values between 0 and 1                                </span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t22" href="#t22">22</a></span><span class="t">    <span class="nam">pred</span> <span class="op">=</span> <span class="nam">model</span><span class="op">.</span><span class="nam">predict</span><span class="op">(</span><span class="nam">img</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t23" href="#t23">23</a></span><span class="t">    <span class="nam">index</span> <span class="op">=</span> <span class="nam">np</span><span class="op">.</span><span class="nam">argmax</span><span class="op">(</span><span class="nam">pred</span><span class="op">)</span> <span class="com"># return the indice of the highest value</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t24" href="#t24">24</a></span><span class="t">    <span class="nam">pred_value</span> <span class="op">=</span> <span class="nam">food_list</span><span class="op">[</span><span class="nam">index</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t25" href="#t25">25</a></span><span class="t">    <span class="key">if</span> <span class="nam">show</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t26" href="#t26">26</a></span><span class="t">        <span class="nam">plt</span><span class="op">.</span><span class="nam">imshow</span><span class="op">(</span><span class="nam">img</span><span class="op">[</span><span class="num">0</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t27" href="#t27">27</a></span><span class="t">        <span class="nam">plt</span><span class="op">.</span><span class="nam">axis</span><span class="op">(</span><span class="str">'off'</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t28" href="#t28">28</a></span><span class="t">        <span class="nam">plt</span><span class="op">.</span><span class="nam">title</span><span class="op">(</span><span class="nam">pred_value</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t29" href="#t29">29</a></span><span class="t">        <span class="nam">plt</span><span class="op">.</span><span class="nam">show</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t30" href="#t30">30</a></span><span class="t">    <span class="key">return</span><span class="op">(</span><span class="nam">pred_value</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+</main>
+<footer>
+    <div class="content">
+        <p>
+            <a id="prevFileLink" class="nav" href="model_training_py.html">&#xab; prev</a> &nbsp; &nbsp;
+            <a id="indexLink" class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
+            <a id="nextFileLink" class="nav" href="test_dataset_separation_py.html">&#xbb; next</a>
+            &nbsp; &nbsp; &nbsp;
+            <a class="nav" href="https://coverage.readthedocs.io">coverage.py v6.5.0</a>,
+            created at 2022-11-18 13:54 +0100
+        </p>
+    </div>
+</footer>
+</body>
+</html>

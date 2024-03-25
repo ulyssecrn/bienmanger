@@ -1,0 +1,34 @@
+p {
+    color: #E2E9C0;
+    font-family: lobster;
+    font-size: 60px
+  }
+
+em {
+    color: #e110109a;
+    font-family: lobster;
+    font-size: 80px
+  } 
+
+vin {
+    font-size: 40px
+  }
+ 
+gr {
+    color: #10f327;
+    font-family: lobster;
+    font-size: 80px
+  } 
+
+or {
+    color: #ef900b;
+    font-family: lobster;
+    font-size: 80px
+  }  
+ 
+.lien:hover {
+    color: #8ed1b1;
+    font-family: lobster;
+    font-size: 60px
+  } 
+

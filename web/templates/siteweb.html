@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Bien Manger</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style/styles.css') }}">
+    <link rel="icon" href="{{ url_for('static',filename='images/icone_bien_manger.JPG') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+    <body style="background-color:#738F84;">
+        <center><h1>Vous aimez bien manger ?</h1>
+        <p>Récupèrez les <strong>recettes</strong> de vos <strong>plats préférés</strong> ici !</p>
+        <img class="image1" src="https://www.cuisined1jour.fr/wp-content/uploads/2020/10/Cuisine-d01.jpg039un-jour-Traiteur-Plat-du-jour-01-1700x563.jpg" />
+        <p>Le concept est le suivant:</p>
+        <ul>
+            <li>Prenez une photo de votre magnifique plat</li>
+            <li>Deposez-là dans l'onglet prévu à cet effet ci-dessous</li>
+            <li>Lancez la recherche</li>
+        </ul>
+        <p>Rien de plus simple ! ;)</p>
+        <form method="post" action="/chercher" enctype="multipart/form-data">
+            <div>
+                <label for="fichier">Choisir une photo</label>
+                <input type="file" id="ficher" name="recipeImage">
+            </div>
+            <input type="submit" value="Obtenir la recette" class="buttons">
+        </form>
+        <p class="exemple">Exemple d'utilisation:</p>
+        <img class="image2" src="http://www.italianconceptrestaurant.com/wp-content/uploads/2020/06/margherita.jpg" />
+        <p></p>
+        <img class="image3" src="https://i.pinimg.com/originals/49/c7/9d/49c79db7cd78b5fc0dfff022db7a043d.png" />
+        <p></p>
+        <img class="image4" src="{{ url_for('static', filename='images/Imagemargharita.JPG')}}"/>
+        </center>
+    </body>
+</html>

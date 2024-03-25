@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recette de dingue</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style/stylerecette.css') }}">
+    <link rel="icon" href="{{ url_for('static',filename='images/icone_bien_manger.JPG') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-color:#738F84;">
+    <center> <p class="texte1">Ce plat est un/une/des <em>{{ recetteName }}</em> !</p>
+    <p>Retrouvez les meilleures recettes <a class="lien" href="https://www.marmiton.org/recettes/recherche.aspx?aqt={{recetteName}}">ici</a></p>
+    <p>Le score de la recette est <{{ session['color'] }}>{{ session['nutriscore'] }}</{{ session['color']}}></p>
+    <p>Un bon plat est toujours accompagné d'un bon vin!</p>
+    <p>Nous vous conseillons <em>{{session['wine_name']}}</em><p>
+    <p>Voici une description : <vin>{{session['wine_text']}}</vin></p>
+    <p>Bonne degustation !</p>
+    <img src="https://i.pinimg.com/originals/1b/06/c9/1b06c96929ce6c721bca9fbb9fc7525f.png">
+    <p>On dit merci Marmiton !</p>
+    </center>
+</body>
+</html>
